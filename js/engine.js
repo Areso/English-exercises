@@ -76,6 +76,9 @@ function nextCard() {
     check_result.innerHTML = "";
     cards_deck_learn.shift(); //delete the last item, so the array is empty
     console.log("END OF THE DECK");
+    document.getElementById("nextBtn").style   = "display: none";
+    document.getElementById("checkBtn").style  = "display: none";
+    document.getElementById("resultDiv").style = "display: none";
   }
 }
 function buildDeck() {
