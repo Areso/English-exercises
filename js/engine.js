@@ -38,22 +38,44 @@ function loadCard() {
   } 
   question.innerHTML = qst;
 }
-function checkAnswer() {
+function getAnswer() {
   if (answer_field.value !== ""){
     user_answer = answer_field.value;
     user_answer = user_answer.toLowerCase();
     user_answer = user_answer.trim();
-    if (user_answer===cards[card_id].answer){
-      console.log("CORRECT");
-      check_result.innerHTML = "CORRECT";
-    } else {
-      console.log("INCORRECT");
-      check_result.innerHTML = "WRONG";
-    }
+    checkAnswer();
   } else { 
     for (i=0;i<cards[card_id].radios.length;i++){ 
-      document.getElementById="radio"+cards[card_id].radios[i]
+      anOption = document.getElementById("radio"+cards[card_id].radios[i]);
+      if (anOption.checked) {
+        user_answer = anOption.value;
+      }
     }
+    checkAnswer();
+  }
+}
+function checkAnswer() { 
+  if (user_answer===cards[card_id].answer){
+    console.log("CORRECT");
+    check_result.innerHTML = "CORRECT";
+  } else {
+    console.log("INCORRECT");
+    check_result.innerHTML = "WRONG";
+  }
+}
+function nextCard() {
+  if (cards_deck_learn.length > 1){
+    answer_field.value = "";
+    answers.innerHTML  = "";
+    check_result.innerHTML = "";
+    cards_deck_learn.shift();
+    card_id = cards_deck_learn[0];
+  } else {
+    answer_field.value = "";
+    answers.innerHTML  = "";
+    check_result.innerHTML = "";
+    cards_deck_learn.shift(); //delete the last item, so the array is empty
+    console.log("END OF THE DECK");
   }
 }
 function buildDeck() {
