@@ -86,39 +86,43 @@ function nextCard() {
   }
 }
 function buildDeck() {
-	smallPractice      = false;
-	if (smallPractice) {//FOR DEBUG!
-		console.log("build a custom deck to train it");
-		if (cards.length>2) {
-			number_of_cards_to_train = 2;
-		} else {
-			number_of_cards_to_train = cards.length;
-		}
-		console.log("number of custom deck cards");
-		console.log(number_of_cards_to_train);
-		number_cards_in_deck       = 0;
-		cards_deck                 = [];
-		card_id_deck_iterator      = 0;
-		while (number_cards_in_deck < number_of_cards_to_train) {
-			roll_the_dice          = Math.floor(Math.random()*cards.length);
-			if (roll_the_dice === 0) {
-				//check whether this card is already added or not?
-				if (!inArray2(cards_deck,card_id_deck_iterator)){
-					cards_deck.push(card_id_deck_iterator);
-					number_cards_in_deck  += 1;
-				}
-			}
-			if (card_id_deck_iterator<cards.length-1){
-				card_id_deck_iterator += 1;
-			} else {
-				card_id_deck_iterator  = 0;
-			} 
-		}
-		card_id = cards_deck[0];
-	}
-	console.log("show me my deck cards_deck");
-	console.log(cards_deck);
+  smallPractice      = false;
+  if (smallPractice) {
+    console.log("build a custom deck to train it");
+    smallDeckSize = 10		
+    if (cards.length>smallDeckSize) {
+      number_of_cards_to_train = smallDeckSize;
+    } else {
+      number_of_cards_to_train = cards.length;
+    }
+  } else {
+    number_of_cards_to_train = cards.length;
+  }
+  console.log("number of custom deck cards");
+  console.log(number_of_cards_to_train);
+  number_cards_in_deck       = 0;
+  cards_deck                 = [];
+  card_id_deck_iterator      = 0;
+  while (number_cards_in_deck < number_of_cards_to_train) {
+    roll_the_dice          = Math.floor(Math.random()*cards.length);
+    if (roll_the_dice === 0) {
+      //check whether this card is already added or not?
+      if (!inArray2(cards_deck,card_id_deck_iterator)){
+        cards_deck.push(card_id_deck_iterator);
+        number_cards_in_deck  += 1;
+      }
+    }
+    if (card_id_deck_iterator<cards.length-1){
+      card_id_deck_iterator += 1;
+    } else {
+      card_id_deck_iterator  = 0;
+    } 
+  }
+  card_id = cards_deck[0];
+  console.log("show me my deck cards_deck");
+  console.log(cards_deck);
 }
+
 loadLesson()
 
 //HELPERS

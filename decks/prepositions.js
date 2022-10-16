@@ -142,7 +142,7 @@ cards = [
  {"question":"Knock-knock. Who is there? The Wolf. Is The Pig home ... %arg1?",
   "answer": "at",
   "radios": ["on", "at", "in"],
-  "arg1": ["present"],
+  "arg1": ["the present"],
  },
  {"question":"We finished ... %arg1?",
   "answer": "at",
