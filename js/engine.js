@@ -68,21 +68,25 @@ function nextCard() {
     answer_field.value = "";
     answers.innerHTML  = "";
     check_result.innerHTML = "";
+    myquestion.innerHTML = "";
     cards_deck_learn.shift();
     card_id = cards_deck_learn[0];
+    loadCard()
   } else {
     answer_field.value = "";
     answers.innerHTML  = "";
     check_result.innerHTML = "";
+    myquestion.innerHTML = "";
     cards_deck_learn.shift(); //delete the last item, so the array is empty
     console.log("END OF THE DECK");
     document.getElementById("nextBtn").style   = "display: none";
     document.getElementById("checkBtn").style  = "display: none";
-    document.getElementById("resultDiv").style = "display: none";
+    document.getElementById("answer_text_field").style = "display: none";
+    document.getElementById("resultLbl").innerHTML = "LESSON PASSED";
   }
 }
 function buildDeck() {
-	smallPractice      = true;
+	smallPractice      = false;
 	if (smallPractice) {//FOR DEBUG!
 		console.log("build a custom deck to train it");
 		if (cards.length>2) {
