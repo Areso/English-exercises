@@ -148,13 +148,6 @@ cards = [
 ]
 
 
-include = function (url, fn) {
-  var e = document.createElement("script");
-  e.onload = fn;
-  e.src = url;
-  e.async=true;
-  document.getElementsByTagName("head")[0].appendChild(e);
-};
 include("js/engine.js",function(){
   //
 });

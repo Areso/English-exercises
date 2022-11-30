@@ -21,6 +21,15 @@ Put the correct preposition!<br><br>
 <br><br>
 <a href="index.html">Back to the table of content</a>
 </body>
+<script>
+include = function (url, fn) {
+  var e = document.createElement("script");
+  e.onload = fn;
+  e.src = url;
+  e.async=true;
+  document.getElementsByTagName("head")[0].appendChild(e);
+};
+</script>
 <script id="lessonDeckScript"></script>
 <script>
 const urlParams = new URLSearchParams(window.location.search);
