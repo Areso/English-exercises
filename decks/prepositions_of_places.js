@@ -103,6 +103,26 @@ cards = [
   "radios": ["on", "at", "in"],
   "arg1": ["Oxford Street"]
  },
+ {"question":"We came here ... %arg1",
+  "answer": "on",
+  "radios": ["on", "at", "in"],
+  "arg1": ["a bus", "a train", "a plane", "a ship"]
+ },
+ {"question":"This time I rode ... %arg1",
+  "answer": "on",
+  "radios": ["on", "at", "in"],
+  "arg1": ["an elephant", "a motorcycle", "a bike", "a horse"]
+ },
+ {"question":"I heard her interview ... %arg1",
+  "answer": "on",
+  "radios": ["on", "at", "in"],
+  "arg1": ["the radio", "TV"]
+ },
+ {"question":"... the way here he made %arg1",
+  "answer": "on",
+  "radios": ["on", "at", "in"],
+  "arg1": ["a mistake", "a prototype"]
+ },
 ]
 
 
