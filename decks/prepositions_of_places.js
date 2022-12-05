@@ -13,7 +13,7 @@ cards = [
   "radios": ["on", "at", "in"],
   "arg1": ["the top of the page", "the end of the page"]
  },
- {"question":"He sitted ... %arg1",
+ {"question":"He sat ... %arg1",
   "answer": "at",
   "radios": ["on", "at", "in"],
   "arg1": ["the front desk", "the rear desk"]
@@ -33,7 +33,7 @@ cards = [
   "radios": ["on", "at", "in"],
   "arg1": ["France", "Tunisia", "Mali"]
  },
- {"question":"The key was ... %arg1",
+ {"question":"The is something for ... %arg1",
   "answer": "in",
   "radios": ["on", "at", "in"],
   "arg1": ["a box", "my pocket"]
@@ -108,7 +108,7 @@ cards = [
   "radios": ["on", "at", "in"],
   "arg1": ["a bus", "a train", "a plane", "a ship"]
  },
- {"question":"This time I rode ... %arg1",
+ {"question":"This time I came ... %arg1",
   "answer": "on",
   "radios": ["on", "at", "in"],
   "arg1": ["an elephant", "a motorcycle", "a bike", "a horse"]
