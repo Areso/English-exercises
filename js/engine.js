@@ -4,6 +4,11 @@ answers      = document.getElementById("answer_radiobutton_div");
 check_result = document.getElementById("resultLbl");
 answer_field = document.getElementById("answer_text_field");
 answer_field.value = "";
+curpos_dom   = document.getElementById("spnCurPos");
+total_dom    = document.getElementById("spnTotal");
+curpos = 0;
+total  = 0;
+
 function loadLesson() {
   console.log(cards);
   buildDeck();
@@ -17,14 +22,12 @@ function loadLesson() {
 }
 function loadCard() {
   qst = cards[card_id].question;
-  console.log(qst)
   if (inArray2(qst, "%arg1")) {
     theCaseId = Math.floor(Math.random() * cards[card_id].arg1.length);
     theCase   = cards[card_id].arg1[theCaseId];
     console.log(theCase);
     qst = qst.replace("%arg1", theCase);
   }
-  console.log(qst)
   for (i=0;i<cards[card_id].radios.length;i++){
     dom_radio = document.createElement('input');
     dom_radio.type  = "radio"
@@ -35,7 +38,9 @@ function loadCard() {
     dom_radio_lbl = document.createElement('label');
     dom_radio_lbl.innerHTML = cards[card_id].radios[i]+"<br>";
     answers.appendChild(dom_radio_lbl);
-  } 
+  }
+  curpos += 1;
+  curpos_dom.innerHTML = curpos;
   question.innerHTML = qst;
 }
 function getAnswer() {
@@ -68,7 +73,7 @@ function nextCard() {
     answer_field.value = "";
     answers.innerHTML  = "";
     check_result.innerHTML = "";
-    myquestion.innerHTML = "";
+    myquestion.innerHTML   = "";
     cards_deck_learn.shift();
     card_id = cards_deck_learn[0];
     loadCard()
@@ -89,7 +94,7 @@ function buildDeck() {
   smallPractice      = false;
   if (smallPractice) {
     console.log("build a custom deck to train it");
-    smallDeckSize = 10		
+    smallDeckSize = 10;
     if (cards.length>smallDeckSize) {
       number_of_cards_to_train = smallDeckSize;
     } else {
@@ -98,8 +103,7 @@ function buildDeck() {
   } else {
     number_of_cards_to_train = cards.length;
   }
-  console.log("number of custom deck cards");
-  console.log(number_of_cards_to_train);
+  total_dom.innerHTML = number_of_cards_to_train;
   number_cards_in_deck       = 0;
   cards_deck                 = [];
   card_id_deck_iterator      = 0;
@@ -119,8 +123,6 @@ function buildDeck() {
     } 
   }
   card_id = cards_deck[0];
-  console.log("show me my deck cards_deck");
-  console.log(cards_deck);
 }
 
 loadLesson()
