@@ -1,4 +1,4 @@
-topic = "Prepositions of places";
+topic = "Prepositions of places.";
 cards = [
  {"question":"She is ... %arg1",
   "answer": "at",

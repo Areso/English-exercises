@@ -99,10 +99,14 @@ function buildDeck() {
     if (cards.length>smallDeckSize) {
       number_of_cards_to_train = smallDeckSize;
     } else {
-      number_of_cards_to_train = cards.length;
+      number_of_cards_to_train = cards.length
     }
   } else {
-    number_of_cards_to_train = cards.length;
+    if (cards.length > 40){
+        number_of_cards_to_train = Math.floor(cards.length/2);
+      } else {
+        number_of_cards_to_train = cards.length;
+    }
   }
   total_dom.innerHTML = number_of_cards_to_train;
   number_cards_in_deck       = 0;
