@@ -6,6 +6,7 @@ answer_field = document.getElementById("answer_text_field");
 answer_field.value = "";
 curpos_dom   = document.getElementById("spnCurPos");
 total_dom    = document.getElementById("spnTotal");
+topic_dom    = document.getElementById("spnTopic");
 curpos = 0;
 total  = 0;
 
@@ -124,7 +125,7 @@ function buildDeck() {
   }
   card_id = cards_deck[0];
 }
-
+topic_dom.innerHTML = topic;
 loadLesson()
 
 //HELPERS
