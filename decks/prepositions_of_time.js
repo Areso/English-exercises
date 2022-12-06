@@ -42,7 +42,7 @@ cards = [
  {"question":"I got a new lego ... %arg1",
   "answer": "on",
   "radios": ["on", "at", "in"],
-  "arg1": ["my birthday", "on New Year's Eve", "on Christmas' Eve"],
+  "arg1": ["my birthday", "New Year's Eve", "Christmas' Eve"],
  },
  {"question":"We got married ... %arg1",
   "answer": "in",
