@@ -61,7 +61,6 @@ cards = [
   "arg1": ["January", "Febrary", "March", "April", "May", "June", "July", 
     "August", "September", "October", "November", "December"], 
  },
-""Summer", "2022"],
  {"question":"We did it ... %arg1",
   "answer": "in",
   "radios": ["on", "at", "in"],
