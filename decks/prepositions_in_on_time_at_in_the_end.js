@@ -30,11 +30,6 @@ cards = [
   "radios": ["on", "at", "in"],
   "arg1": ["see the footbal"]
  },
- {"question":"Pushkin was born ... %arg1",
-  "answer": "on",
-  "radios": ["on", "at", "in"],
-  "arg1": ["June 6, 1799"]
- },
  {"question":"We got here just ... time %arg1",
   "answer": "in",
   "radios": ["on", "at", "in"],
