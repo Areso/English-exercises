@@ -7,6 +7,7 @@ answer_field.value = "";
 curpos_dom   = document.getElementById("spnCurPos");
 total_dom    = document.getElementById("spnTotal");
 topic_dom    = document.getElementById("spnTopic");
+action_dom   = document.getElementById("lblAction");
 curpos = 0;
 total  = 0;
 
@@ -60,11 +61,23 @@ function getAnswer() {
     checkAnswer();
   }
 }
+function showAnswer() {
+  if (action_dom.innerHTML !== "ANSWER: "){
+      action_dom.innerHTML = "ANSWER: "
+  }
+  resultLbl.innerHTML = cards[card_id].answer;
+}
 function checkAnswer() { 
   if (user_answer===cards[card_id].answer){
+    if (action_dom.innerHTML !== "CHECK: "){
+      action_dom.innerHTML = "CHECK: "
+    }
     console.log("CORRECT");
     check_result.innerHTML = "CORRECT";
   } else {
+    if (action_dom.innerHTML !== "CHECK: "){
+      action_dom.innerHTML = "CHECK: "
+    }
     console.log("INCORRECT");
     check_result.innerHTML = "WRONG";
   }
