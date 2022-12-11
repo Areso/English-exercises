@@ -1,16 +1,25 @@
 //DOM OBJECTS
-myquestion   = document.getElementById("question");
-answers      = document.getElementById("answer_radiobutton_div");
-check_result = document.getElementById("resultLbl");
-answer_field = document.getElementById("answer_text_field");
-answer_field.value = "";
-curpos_dom   = document.getElementById("spnCurPos");
-total_dom    = document.getElementById("spnTotal");
+if (window.location.href.indexOf("grammar.html")!==-1){
+  pageType="grammar";
+  grammar_dom  = document.getElementById("spnGrammar");
+} else {
+  pageType="lesson";
+  myquestion   = document.getElementById("question");
+  answers      = document.getElementById("answer_radiobutton_div");
+  check_result = document.getElementById("resultLbl");
+  answer_field = document.getElementById("answer_text_field");
+  answer_field.value = "";
+  curpos_dom   = document.getElementById("spnCurPos");
+  total_dom    = document.getElementById("spnTotal");
+  action_dom   = document.getElementById("lblAction");
+}
 topic_dom    = document.getElementById("spnTopic");
-action_dom   = document.getElementById("lblAction");
 curpos = 0;
 total  = 0;
 
+function loadGrammar() {
+  grammar_dom.innerHTML = grammar;
+}
 function loadLesson() {
   console.log(cards);
   buildDeck();
@@ -142,8 +151,18 @@ function buildDeck() {
   }
   card_id = cards_deck[0];
 }
-topic_dom.innerHTML = topic;
-loadLesson()
+
+
+if (typeof grammar !== 'undefined' && pageType==="lesson") {
+  topic_dom.innerHTML = "<a href='grammar.html?lesson="+lesson_name+"'>"+topic+"</a>";
+} else {
+  topic_dom.innerHTML = topic;
+}
+if (pageType==="lesson"){ 
+  loadLesson();
+} else {
+  loadGrammar();
+}
 
 //HELPERS
 function shuffleArray(array) {
