@@ -76,8 +76,24 @@ function showAnswer() {
   }
   resultLbl.innerHTML = cards[card_id].answer;
 }
-function checkAnswer() { 
-  if (user_answer===cards[card_id].answer){
+function isAcceptable(providedAnswer) {
+  //typeof from an array returns object!
+  if (typeof(cards[card_id].answer)==="string"){
+    if (providedAnswer===cards[card_id].answer) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    if (cards[card_id].answer.indexOf(providedAnswer)!==-1){
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+function checkAnswer() {
+  if (isAcceptable(user_answer)){
     if (action_dom.innerHTML !== "CHECK: "){
       action_dom.innerHTML = "CHECK: "
     }

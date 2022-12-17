@@ -1,10 +1,18 @@
 topic = "To/at/in/into.";
-grammar = "we say go/come/travel to a place or event<br>";
-grammar+= "on my way to/a journey or trip to<br>";
-grammar+= "we say 'I'have been to a place'<br>";
-grammar+= "get to a place<br>";
-grammar+= "but arrive in a country or town/city<br>";
-grammar+= "arrive at places or events<br>";
+grammar = "We say 'go/come/travel to a place or event'<br>";
+grammar+= "We say 'on my way to/a journey(trip) to'<br>";
+grammar+= "We say 'Going to, come to a place'<br>";
+grammar+= "We say 'Get to city/building/event'<br>";
+grammar+= "We say 'I'have been to a place'<br>";
+grammar+= "But arrive in a country or town/city<br>";
+grammar+= "But arrive at places or events<br>";
+grammar+= "Go/come/get/arrive/on the way home doesn't require prep<br>";
+grammar+= "But 'be/stay/do smth at home'<br>";
+grammar+= "Go into, get into = 'enter'<br>"
+grammar+= "Acceptable: Come in(to) house<br>"
+grammar+= "Enter doesnt req prep! eg Enter a house<br>";
+grammar+= "The opp: ouf of smth<br>";
+grammar+= "Get on/off a bus/train/plane<br>";
 
 cards = [
  {"question":"I want to go ... %arg1",
@@ -42,37 +50,70 @@ cards = [
   "radios": ["to", "at", "in", "into"],
   "arg1": ["Italy", "Rome", "a hockey match", "the dealership"]
  },
- {"question":"We got here just ... time %arg1",
+ {"question":"When did they get ... %arg1?",
+  "answer": "to",
+  "radios": ["to", "at", "in", "into"],
+  "arg1": ["Paris", "work", "the party?"]
+ },
+ {"question":"How did arrive ... %arg1?",
   "answer": "in",
-  "radios": ["on", "at", "in"],
-  "arg1": ["to catch the train", "to catch the bus"],
+  "radios": ["to", "at", "in", "into"],
+  "arg1": ["Madrid", "Spain", "Columbia"]
  },
- {"question":"I'm going away ... the end of %arg1",
+ {"question":"How did arrive ... %arg1?",
   "answer": "at",
-  "radios": ["on", "at", "in"],
-  "arg1": ["my contract", "May", "Summer"],
+  "radios": ["to", "at", "in", "into"],
+  "arg1": ["the hotel", "the party", "work"]
  },
- {"question":"... the end of performance, there was %arg1 appluase",
+ {"question":"It's late. We should %arg1 ... home",
+  "answer": "",
+  "radios": ["to", "at", "in", "into", ""],
+  "arg1": ["go", "come", "be on the way"]
+ },
+ {"question":"We are arrive ... home",
+  "answer": "",
+  "radios": ["to", "at", "in", "into", ""],
+  "arg1": []
+ },
+ {"question":"How did arrive ... %arg1?",
   "answer": "at",
-  "radios": ["on", "at", "in"],
-  "arg1": ["long", "great", "loud"],
+  "radios": ["to", "at", "in", "into"],
+  "arg1": ["the hotel", "the party", "work"]
  },
- {"question":"Contesters shook ... the end of the match",
+ {"question":"%arg1 ... home today",
   "answer": "at",
-  "radios": ["on", "at", "in"],
-  "arg1": [],
+  "radios": ["to", "at", "in", "into"],
+  "arg1": ["Be", "Stay", "Just do something"]
  },
- {"question":"He came here ... the beginning of %arg1",
-  "answer": "at",
-  "radios": ["on", "at", "in"],
-  "arg1": ["January", "Febrary", "March", "April", "May", "June", "July", 
-    "August", "September", "October", "November", "December",
-    "winter", "spring", "summer", "autumn", "fall"], 
+ {"question":"He got ... the car and drove away",
+  "answer": ["into", "in"],
+  "radios": ["to", "at", "in", "into"],
+  "arg1": []
  },
- {"question":"... the end we %arg1 it",
-  "answer": "in",
-  "radios": ["on", "at", "in"],
-  "arg1": ["sold", "bought", "made"],
+ {"question":"A %arg1 flew ... the kitchen through the window",
+  "answer": ["into", "in"],
+  "radios": ["to", "at", "in", "into"],
+  "arg1": ["bat", "bird", "owl"]
+ },
+ {"question":"A %arg1 flew ... the kitchen through the window",
+  "answer": "into",
+  "radios": ["to", "at", "in", "into"],
+  "arg1": ["bat", "bird", "owl"]
+ },
+ {"question":"He got out ... the %arg1 and went into a shop",
+  "answer": "of",
+  "radios": ["to", "at", "in", "into", "of"],
+  "arg1": ["car", "bus"]
+ },
+ {"question":"He got ... the bus and the bus carried him away",
+  "answer": "on",
+  "radios": ["to", "at", "in", "into", "on"],
+  "arg1": []
+ },
+ {"question":"He got ... the bus and went into a building",
+  "answer": "off",
+  "radios": ["to", "at", "in", "into", "off"],
+  "arg1": []
  },
 ]
 
