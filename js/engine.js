@@ -39,6 +39,12 @@ function loadCard() {
     console.log(theCase);
     qst = qst.replace("%arg1", theCase);
   }
+  if (inArray2(qst, "%arg2")) {
+    theCaseId = Math.floor(Math.random() * cards[card_id].arg2.length);
+    theCase2   = cards[card_id].arg2[theCaseId];
+    console.log(theCase2);
+    qst = qst.replace("%arg2", theCase2);
+  }
   for (i=0;i<cards[card_id].radios.length;i++){
     dom_radio = document.createElement('input');
     dom_radio.type  = "radio"
