@@ -70,7 +70,7 @@ cards = [
   "radios": ["to", "at", "in", "into", ""],
   "arg1": ["go", "come", "be on the way"]
  },
- {"question":"We are arrive ... home",
+ {"question":"We arrive ... home",
   "answer": "",
   "radios": ["to", "at", "in", "into", ""],
   "arg1": []
