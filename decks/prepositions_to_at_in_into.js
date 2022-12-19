@@ -35,10 +35,10 @@ cards = [
   "radios": ["to", "at", "in", "into"],
   "arg1": ["a concert", "a party"]
  },
- {"question":"A person was sent ... prison",
+ {"question":"A person was sent ... %arg1",
   "answer": "to",
   "radios": ["to", "at", "in", "into"],
-  "arg1": []
+  "arg1": ["prison", "jail"]
  },
  {"question":"Injured people were taken ... hospital",
   "answer": "to",
@@ -53,7 +53,7 @@ cards = [
  {"question":"How did they get ... %arg1?",
   "answer": "to",
   "radios": ["to", "at", "in", "into"],
-  "arg1": ["Paris", "work", "the party?"]
+  "arg1": ["Paris", "work", "the party"]
  },
  {"question":"When did you arrive ... %arg1?",
   "answer": "in",
@@ -70,7 +70,7 @@ cards = [
   "radios": ["to", "at", "in", "into", ""],
   "arg1": ["go", "come", "be on the way"]
  },
- {"question":"We arrive ... home",
+ {"question":"We arrive ... home late",
   "answer": "",
   "radios": ["to", "at", "in", "into", ""],
   "arg1": []
@@ -90,20 +90,15 @@ cards = [
   "radios": ["to", "at", "in", "into"],
   "arg1": []
  },
- {"question":"A %arg1 flew ... the kitchen through the window",
-  "answer": ["into", "in"],
-  "radios": ["to", "at", "in", "into"],
-  "arg1": ["bat", "bird", "owl"]
- },
- {"question":"A %arg1 flew ... the kitchen through the window",
+ {"question":"%arg1 flew ... the kitchen through the window",
   "answer": "into",
   "radios": ["to", "at", "in", "into"],
-  "arg1": ["bat", "bird", "owl"]
+  "arg1": ["A bat", "A bird", "An owl"]
  },
  {"question":"He got out ... the %arg1 and went into a shop",
   "answer": "of",
   "radios": ["to", "at", "in", "into", "of"],
-  "arg1": ["car", "bus"]
+  "arg1": ["car", "taxi"]
  },
  {"question":"He got ... the bus and the bus carried him away",
   "answer": "on",
