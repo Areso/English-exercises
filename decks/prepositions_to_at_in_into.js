@@ -50,17 +50,17 @@ cards = [
   "radios": ["to", "at", "in", "into"],
   "arg1": ["Italy", "Rome", "a hockey match", "the dealership"]
  },
- {"question":"When did they get ... %arg1?",
+ {"question":"How did they get ... %arg1?",
   "answer": "to",
   "radios": ["to", "at", "in", "into"],
   "arg1": ["Paris", "work", "the party?"]
  },
- {"question":"How did arrive ... %arg1?",
+ {"question":"When did you arrive ... %arg1?",
   "answer": "in",
   "radios": ["to", "at", "in", "into"],
   "arg1": ["Madrid", "Spain", "Columbia"]
  },
- {"question":"How did arrive ... %arg1?",
+ {"question":"When did you arrive ... %arg1?",
   "answer": "at",
   "radios": ["to", "at", "in", "into"],
   "arg1": ["the hotel", "the party", "work"]
