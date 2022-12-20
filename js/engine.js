@@ -33,16 +33,28 @@ function loadLesson() {
 }
 function loadCard() {
   qst = cards[card_id].question;
-  if (inArray2(qst, "%arg1")) {
+  tied = false;
+  if (typeof cards[card_id].tied !== 'undefined' && cards[card_id].tied==="yes"){
+    tied = true;
+  }
+  if (tied === false){
+    if (inArray2(qst, "%arg1")) {
+      theCaseId = Math.floor(Math.random() * cards[card_id].arg1.length);
+      theCase   = cards[card_id].arg1[theCaseId];
+      console.log(theCase);
+      qst = qst.replace("%arg1", theCase);
+    }
+    if (inArray2(qst, "%arg2")) {
+      theCaseId = Math.floor(Math.random() * cards[card_id].arg2.length);
+      theCase2   = cards[card_id].arg2[theCaseId];
+      console.log(theCase2);
+      qst = qst.replace("%arg2", theCase2);
+    }
+  } else {
     theCaseId = Math.floor(Math.random() * cards[card_id].arg1.length);
     theCase   = cards[card_id].arg1[theCaseId];
-    console.log(theCase);
-    qst = qst.replace("%arg1", theCase);
-  }
-  if (inArray2(qst, "%arg2")) {
-    theCaseId = Math.floor(Math.random() * cards[card_id].arg2.length);
     theCase2   = cards[card_id].arg2[theCaseId];
-    console.log(theCase2);
+    qst = qst.replace("%arg1", theCase);
     qst = qst.replace("%arg2", theCase2);
   }
   for (i=0;i<cards[card_id].radios.length;i++){

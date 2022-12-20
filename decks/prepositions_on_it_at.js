@@ -15,7 +15,7 @@ grammar+= "in cash, but by cheque / by credit card<br>";
 grammar+= "at the age of/at a speed of/at a temp of<br>";
 
 cards = [
- {"question":"I am %arg1 ... holiday in %arg1",
+ {"question":"I am %arg1 ... holiday in %arg2",
   "answer": "on",
   "radios": ["on", "in", "at", "for"],
   "arg1": ["", "going"],
@@ -88,9 +88,12 @@ cards = [
   "answer": "in",
   "radios": ["in", "by", "with", "at"],
  },
- {"question":"I left school ... 17",
+ {"question":"I left %arg1 ... %arg2",
   "answer": "at",
   "radios": ["in", "by", "with", "at"],
+  "arg1": ["school","university"],
+  "arg2": [17, 22],
+  "tied": "yes",
  },
  {"question":"I left school ... the age of 17",
   "answer": "at",
