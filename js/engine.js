@@ -116,13 +116,13 @@ function checkAnswer() {
       action_dom.innerHTML = "CHECK: "
     }
     console.log("CORRECT");
-    check_result.innerHTML = "CORRECT";
+    check_result.innerHTML = "<span class='correct'>CORRECT<span>";
   } else {
     if (action_dom.innerHTML !== "CHECK: "){
       action_dom.innerHTML = "CHECK: "
     }
     console.log("INCORRECT");
-    check_result.innerHTML = "WRONG";
+    check_result.innerHTML = "<span class='wrong'>WRONG<span>";
   }
 }
 function nextCard() {
