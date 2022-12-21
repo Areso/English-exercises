@@ -1,7 +1,7 @@
 topic = "Irregular verbs. Write 2nd and 3rd forms of a verb.";
 cards = [
  {"question":"be",
-  "answer": ["was been", "were been"]
+  "answer": ["was been", "were been"],
   "radios": [],
   "arg1": []},
  {"question":"become",
