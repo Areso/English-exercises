@@ -1,4 +1,4 @@
-topic = "Prepositions of time.";
+topic = "Usage of 'by' preposition.";
 grammar = "We 'by' to answer 'how' it happened<br>";
 grammar+= "With a few exceptions: 'pay in cash',<br>";
 grammar+= "'done on purpose', 'on foot'.<br>"
