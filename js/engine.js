@@ -110,14 +110,35 @@ function isAcceptable(providedAnswer) {
     }
   }
 }
+function isMinor(providedAnswer) {
+  if (typeof(cards[card_id].answer)!=="string"){
+    if (cards[card_id].answer.indexOf(providedAnswer)>0){
+      if (typeof cards[card_id].minor !== 'undefined' && cards[card_id].minor==="yes"){
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
 function checkAnswer() {
   if (isAcceptable(user_answer)){
+	//CORRECT OR ACCEPTABLE ANSWER
     if (action_dom.innerHTML !== "CHECK: "){
       action_dom.innerHTML = "CHECK: "
     }
     console.log("CORRECT");
-    check_result.innerHTML = "<span class='correct'>CORRECT<span>";
+    if (!isMinor(user_answer)){
+      check_result.innerHTML = "<span class='correct'>CORRECT<span>";
+    } else {
+	  check_result.innerHTML="<span class='correct'>CORRECT, "+cards[card_id].comment+"<span>";
+    }
   } else {
+	//INCORRECT ANSWER
     if (action_dom.innerHTML !== "CHECK: "){
       action_dom.innerHTML = "CHECK: "
     }
