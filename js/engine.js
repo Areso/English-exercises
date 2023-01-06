@@ -125,6 +125,13 @@ function isMinor(providedAnswer) {
     return false;
   }
 }
+function isShowComment(){
+  if (typeof cards[card_id].showcomment !== 'undefined' && cards[card_id].showcomment==="yes") {
+    return true;
+  } else {
+    return false;
+  }
+}
 function checkAnswer() {
   if (isAcceptable(user_answer)){
 	//CORRECT OR ACCEPTABLE ANSWER
@@ -133,7 +140,11 @@ function checkAnswer() {
     }
     console.log("CORRECT");
     if (!isMinor(user_answer)){
-      check_result.innerHTML = "<span class='correct'>CORRECT<span>";
+      if (isShowComment()){
+        check_result.innerHTML="<span class='correct'>CORRECT, "+cards[card_id].comment+"<span>";
+      } else {
+        check_result.innerHTML = "<span class='correct'>CORRECT<span>";
+      }
     } else {
 	  check_result.innerHTML="<span class='correct'>CORRECT, "+cards[card_id].comment+"<span>";
     }
