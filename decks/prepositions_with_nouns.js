@@ -83,7 +83,7 @@ cards = [
   "radios": ["with", "to", "for"],
   "arg1": ["relationship","contact","connection"],
  },
- {"question":"There are not differences ... Evil and Good",
+ {"question":"There are no difference ... Evil and Good",
   "answer": "between",
   "radios": ["with", "to", "for", "between"],
   "arg1": ["relationship","contact","connection"],
