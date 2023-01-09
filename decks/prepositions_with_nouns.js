@@ -26,7 +26,7 @@ cards = [
   "answer": "for",
   "radios": ["for", "of", "by", "on"],
  },
- {"question":"The advantage ... Steamdeck in 'free' PC games",
+ {"question":"The advantage ... Steamdeck is 'free' PC games",
   "answer": ["of", "in", "to"],
   "radios": ["of", "in", "to", "by"],
   "comment": "of; in, to - also accepted",
