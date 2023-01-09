@@ -62,7 +62,7 @@ cards = [
   "answer": "to",
   "radios": ["of", "to", "for"],
  },
- {"question":"An asnwer ... the question is the year of 1255",
+ {"question":"An answer ... the question is the year of 1255",
   "answer": "to",
   "radios": ["of", "to", "for"],
  },
