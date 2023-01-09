@@ -42,7 +42,7 @@ cards = [
   "answer": "of",
   "radios": ["of", "in", "to", "by"],
  },
- {"question":"A map ... the castle was done in XIX century",
+ {"question":"A map ... the castle was made in XIX century",
   "answer": "of",
   "radios": ["of", "in", "to", "by"],
  },
