@@ -34,7 +34,7 @@ cards = [
   "comment": "of; in is also accepted; TO is accepted with gerunds",
   "minor": "yes",
  },
- {"question":"The cause ... death is the blood lost",
+ {"question":"The cause ... death is the blood loss",
   "answer": "of",
   "radios": ["of", "in", "to", "by"],
  },
