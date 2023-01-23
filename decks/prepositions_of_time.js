@@ -111,7 +111,7 @@ cards = [
  {"question":"We hope to achieve it ... %arg1",
   "answer": "",
   "radios": ["on", "at", "in", ""],
-  "arg1": ["tnext century"],
+  "arg1": ["next century"],
  },
  {"question":"We usually drink tea ... %arg1",
   "answer": "at",
