@@ -146,7 +146,7 @@ cards = [
  {"question":"I usually write articles ... %arg1",
   "answer": ["at", "on"],
   "radios": ["on", "at", "in"],
-  "arg1": ["the weekened"],
+  "arg1": ["the weekend"],
   "comment": "ON is acceptable in US English",
   "minor": "yes",
  },
