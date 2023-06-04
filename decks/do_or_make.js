@@ -1,0 +1,87 @@
+topic = "Usage of verbs Do and Make.";
+grammar = "Use 'make' when you create or produce something<br>";
+grammar+= "Use 'do' for actions: jobs, work, general activities you repeat often<br>";
+cards = [
+ {"question":"I ... a %arg1 for you",
+  "answer": "made",
+  "radios": ["made", "did"],
+  "arg1": ["cake", "coctail", "present"],
+ },
+ {"question":"You ... too much noise",
+  "answer": "make",
+  "radios": ["make", "do"],
+ },
+ {"question":"Could you ... %arg1?",
+  "answer": "make",
+  "radios": ["make", "do"],
+  "arg1": ["a comment", "a speech", "a suggestion"]
+ },
+  {"question":"I ... my %arg1",
+  "answer": "did",
+  "radios": ["did", "made"],
+  "arg1": ["homework", "housework", "chores", "job"],
+ },
+ {"question":"I ... %arg1",
+  "answer": "did",
+  "radios": ["did", "made"],
+  "arg1": ["something", "nothing", "everything"],
+ },
+ {"question":"I will ... %arg1 for you",
+ "answer": "do",
+ "radios": ["do", "make"],
+ "arg1": ["anything"],
+ },
+ {"question":"I ... plans for the upcoming weekend already",
+  "answer": "made",
+  "radios": ["made", "did"]
+ },
+ {"question":"I ... a %arg1",
+  "answer": "made",
+  "radios": ["made", "did"],
+  "arg1": ["decision", "plan", "choice"]
+ },
+ {"question":"Have you ... the dishes yet?",
+  "answer": "done",
+  "radios": ["done", "made"],
+  "comment": "done=washed"
+ },
+ {"question":"I'll ... the lawns, if you ... the kitchen",
+  "answer": "do",
+  "radios": ["make", "do"],
+  "comment": "do the lawns=mow, do the kitchen=clean"
+ },
+ {"question":"This building is ... of concrete",
+  "answer": "made",
+  "radios": ["made", "did"],
+ },
+ {"question":"This watchtower is ... from wood",
+  "answer": "made",
+  "radios": ["made", "did"],
+ },
+ {"question":"This PC ... in PRC",
+ "answer": "made",
+ "radios": ["made", "did"],
+ },
+ {"question":"This present is ... by me",
+ "answer": "made",
+ "radios": ["made", "did"],
+ },
+  {"question":"She ... me happy",
+  "answer": "made",
+  "radios": ["made", "did"],
+ },
+ {"question":"Onions always ... your eyes water",
+  "answer": "make",
+  "radios": ["make", "do"],
+ },
+ {"question":"It’s not his fault. I ... him do it!",
+  "answer": "made",
+  "radios": ["made", "did"],
+ },
+
+]
+
+
+include("js/engine.js",function(){
+  //
+});
