@@ -96,7 +96,7 @@ cards = [
   "answer": "at",
   "radios": ["in", "by", "with", "at"],
   "arg1": ["school","university", "school","university"],
-  "arg2": [17, 22, "at the age of 17", "at the age of 21"],
+  "arg2": [17, 22, "the age of 17", "the age of 21"],
   "tied": "yes",
  },
  {"question":"I graduated from %arg1 ... %arg2",
