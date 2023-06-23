@@ -14,3 +14,4 @@ Irregular verbs
 
 ## ToDo  
 Articles (an/a/the)
+Comparative and superlative adjectives
