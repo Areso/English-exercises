@@ -11,7 +11,8 @@ Try here: [english.areso.pro](https://english.areso.pro/)
 Make or Do  
 Prepositions  
 Irregular verbs  
+Synonyms (you need to type the rarest synonym possible)  
 
 ## ToDo  
-Articles (an/a/the)
-Comparative and superlative adjectives
+Articles (an/a/the)  
+Comparative and superlative adjectives  
