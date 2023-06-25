@@ -16,6 +16,7 @@ if (window.location.href.indexOf("grammar.html")!==-1){
 topic_dom    = document.getElementById("spnTopic");
 curpos = 0;
 total  = 0;
+thefreq= -1;
 
 function loadGrammar() {
   grammar_dom.innerHTML = grammar;
@@ -137,6 +138,22 @@ function isShowComment(){
     return false;
   }
 }
+function getFreq(word_to_check){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState === 4 && this.status === 200) {
+      back_response = JSON.parse(this.responseText);
+      console.log(back_response);
+      thefreq = parseInt(back_response);
+      if (thefreq!==-1) {
+        check_result.innerHTML += "; "+thefreq+"th";
+      }
+    }
+  };
+  endpoint    = "https://freq.english.areso.pro:8099/get_freq?word="+word_to_check;
+  xhttp.open("GET", endpoint, true);
+  xhttp.send();
+}
 function checkAnswer() {
   if (isAcceptable(user_answer)){
 	//CORRECT OR ACCEPTABLE ANSWER
@@ -144,6 +161,10 @@ function checkAnswer() {
       action_dom.innerHTML = "CHECK: "
     }
     console.log("CORRECT");
+    thefreq = -1;
+    if (lesson_name==="synonyms") {
+      getFreq(user_answer);
+    }
     if (!isMinor(user_answer)){
       if (isShowComment()){
         check_result.innerHTML="<span class='correct'>CORRECT, "+cards[card_id].comment+"<span>";
@@ -151,7 +172,7 @@ function checkAnswer() {
         check_result.innerHTML = "<span class='correct'>CORRECT<span>";
       }
     } else {
-	  check_result.innerHTML="<span class='correct'>CORRECT, "+cards[card_id].comment+"<span>";
+      check_result.innerHTML="<span class='correct'>CORRECT, "+cards[card_id].comment+"<span>";
     }
   } else {
 	//INCORRECT ANSWER
