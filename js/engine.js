@@ -57,16 +57,19 @@ function loadCard() {
     qst = qst.replace("%arg1", theCase);
     qst = qst.replace("%arg2", theCase2);
   }
-  for (i=0;i<cards[card_id].radios.length;i++){
-    dom_radio = document.createElement('input');
-    dom_radio.type  = "radio"
-    dom_radio.name  = "possibleAnswers";
-    dom_radio.value = cards[card_id].radios[i];
-    dom_radio.id    = "radio"+cards[card_id].radios[i];
-    answers.appendChild(dom_radio);
-    dom_radio_lbl = document.createElement('label');
-    dom_radio_lbl.innerHTML = cards[card_id].radios[i]+"<br>";
-    answers.appendChild(dom_radio_lbl);
+  //synonyms lesson doesn't provide options
+  if (cards[card_id].hasOwnProperty("radios")) {
+    for (i=0;i<cards[card_id].radios.length;i++){
+      dom_radio = document.createElement('input');
+      dom_radio.type  = "radio"
+      dom_radio.name  = "possibleAnswers";
+      dom_radio.value = cards[card_id].radios[i];
+      dom_radio.id    = "radio"+cards[card_id].radios[i];
+      answers.appendChild(dom_radio);
+      dom_radio_lbl = document.createElement('label');
+      dom_radio_lbl.innerHTML = cards[card_id].radios[i]+"<br>";
+      answers.appendChild(dom_radio_lbl);
+    }
   }
   curpos += 1;
   curpos_dom.innerHTML = curpos;
@@ -79,11 +82,13 @@ function getAnswer() {
     user_answer = user_answer.trim();
     checkAnswer();
   } else { 
+    if (cards[card_id].hasOwnProperty("radios")) {
     for (i=0;i<cards[card_id].radios.length;i++){ 
       anOption = document.getElementById("radio"+cards[card_id].radios[i]);
       if (anOption.checked) {
         user_answer = anOption.value;
       }
+    }
     }
     checkAnswer();
   }
