@@ -12,7 +12,8 @@ Make or Do
 Prepositions  
 Irregular verbs  
 Synonyms (you need to type the rarest synonym possible)  
+Comparative and superlative adjectives  
 
 ## ToDo  
 Articles (an/a/the)  
-Comparative and superlative adjectives  
+
