@@ -1,3 +1,11 @@
+if (window.location.href.indexOf("file")===-1){
+  webserver = "";
+  dev_flag  = false;
+} else {
+  webserver = "http://localhost:8091";
+  dev_flag  = true;
+}
+
 function polyfill_uuidv4() {
     return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
       (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
@@ -54,10 +62,14 @@ function sendEvent(eventname, params) {
 }
 
 if (window.location.href.indexOf("index")!==-1){
-  sendEvent("main menu loaded", "");
+  if (dev_flag==true){
+    sendEvent("main menu loaded", "");
+  }
 }
 if (window.location.href.indexOf("lesson")>0 || window.location.href.indexOf("grammar")>0){
   //nothing happens
 } else {
-  sendEvent("main menu loaded", "");
+  if (dev_flag==true){
+    sendEvent("main menu loaded", "");
+  }
 }
