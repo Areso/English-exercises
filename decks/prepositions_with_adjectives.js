@@ -87,12 +87,12 @@ cards = [
   "radios": ["about", "for", "by", "at", "with"],
  },
  {"question":"I'm sorry ... I shot you last night",
-  "answer": "",
-  "radios": ["about", "for", "by", "at", ""],
+  "answer": ["","no preposition"],
+  "radios": ["about", "for", "by", "at", "no preposition"],
  },
  {"question":"I feel sorry ... my colleague. He was fired",
   "answer": "for",
-  "radios": ["about", "for", "by", "at", ""],
+  "radios": ["about", "for", "by", "at", "no preposition"],
  },
 
 ]

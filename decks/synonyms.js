@@ -13,7 +13,7 @@ cards = [
   "question_word": "small"
  },
  {"question":"Did you saw how _slow_(th) this car is?",
-  "answer": ["", ""],
+  "answer": ["unrushed"],
   "question_word": "slow"
  },
  {"question":"A girl rides a _horse_",
