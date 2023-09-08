@@ -196,13 +196,15 @@ function nextCard() {
     answer_field.value = "";
     answers.innerHTML  = "";
     check_result.innerHTML = "";
+    action_dom.innerHTML   = "";
     myquestion.innerHTML = "";
     cards_deck_learn.shift(); //delete the last item, so the array is empty
     console.log("END OF THE DECK");
     document.getElementById("nextBtn").style   = "display: none";
     document.getElementById("checkBtn").style  = "display: none";
+    document.getElementById("showAnswerBtn").style = "display: none";
     document.getElementById("answer_text_field").style = "display: none";
-    document.getElementById("resultLbl").innerHTML = "LESSON PASSED";
+    document.getElementById("resultLbl").innerHTML = "LESSON FINISHED";
   }
 }
 function buildDeck() {
