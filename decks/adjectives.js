@@ -17,7 +17,7 @@ grammar+= "common/cruel/gentle/handsome/likely/narrow<br>";
 grammar+= "pleasant/polite/simple/stupid<br>";
 grammar+= "The is not used with superlatives in predicative position,<br>when we compare the same person or thing in different situations.<br>"
 cards = [
- {"question":"I car is ... (big) car than his",
+ {"question":"My car is ... (big) car than his",
   "answer": "bigger"
  },
  {"question":"It is ... (big) building in the town",
