@@ -36,7 +36,7 @@ cards = [
  "radios": ["do", "make"],
  "arg1": ["anything"],
  },
- {"question":"I ... plans for the upcoming weekend already",
+ {"question":"I have already ... plans for the upcoming weekend",
   "answer": "made",
   "radios": ["made", "did"]
  },
@@ -64,14 +64,17 @@ cards = [
  {"question":"This building is ... of concrete",
   "answer": "made",
   "radios": ["made", "did"],
+  "comment": "passive voice"
  },
  {"question":"This watchtower is ... from wood",
   "answer": "made",
   "radios": ["made", "did"],
+  "comment": "passive voice"
  },
  {"question":"This PC ... in PRC",
  "answer": "made",
  "radios": ["made", "did"],
+ "comment": "passive voice"
  },
  {"question":"This present is ... by me",
  "answer": "made",
@@ -94,7 +97,7 @@ cards = [
   "radios": ["made", "did"],
  },
  {"question":"Have you ... your homework?",
-  "answer": "made",
+  "answer": "done",
   "radios": ["made", "done"],
  },
  {"question":"I %arg1 ... this job",

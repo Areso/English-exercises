@@ -1,4 +1,4 @@
-topic = "In/on time, at/in the end.";
+topic = "In/on time, at/in the end/beginning.";
 cards = [
  {"question":"The 11:30 %arg1 left ... time",
   "answer": "on",
@@ -21,14 +21,14 @@ cards = [
   "arg1": ["dinner", "Christmas Eve"]
  },
  {"question":"I sent her a present. I hope it arrives ... time",
-  "answer": "in",
+  "answer": "on",
   "radios": ["on", "at", "in"],
   "arg1": []
  },
  {"question":"I want to get home ... time to %arg1",
   "answer": "in",
   "radios": ["on", "at", "in"],
-  "arg1": ["see the footbal"]
+  "arg1": ["watch the footbal"]
  },
  {"question":"We got here just ... time %arg1",
   "answer": "in",
@@ -40,12 +40,12 @@ cards = [
   "radios": ["on", "at", "in"],
   "arg1": ["my contract", "May", "Summer"],
  },
- {"question":"... the end of performance, there was %arg1 appluase",
+ {"question":"... the end of performance, there was %arg1 applause",
   "answer": "at",
   "radios": ["on", "at", "in"],
   "arg1": ["long", "great", "loud"],
  },
- {"question":"Contesters shook ... the end of the match",
+ {"question":"Contesters shook hands ... the end of the match",
   "answer": "at",
   "radios": ["on", "at", "in"],
   "arg1": [],

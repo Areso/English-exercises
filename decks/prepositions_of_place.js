@@ -1,4 +1,4 @@
-topic = "Prepositions of places.";
+topic = "Prepositions of place.";
 cards = [
  {"question":"She is ... %arg1",
   "answer": "at",
@@ -11,13 +11,13 @@ cards = [
  {"question":"She is ... %arg1",
   "answer": ["at","in"],
   "radios": ["on", "at", "in"],
-  "arg1": ["hospital"],
-  "comment": "at hospital - works there, visits a place; in - being admitted to",
+  "arg1": ["the hospital"],
+  "comment": "at the hospital - works there, visits a place; in - being admitted to",
   "minor": "yes"},
  {"question":"I was %arg1 ... a church",
   "answer": "at",
   "radios": ["on", "at", "in"],
-  "arg1": ["confessed", "married", "sinned", "working"]},
+  "arg1": ["confessed", "married", "working"]},
  {"question":"... a church I saw a beautiful mosaic, early 15th century",
   "answer": "in",
   "radios": ["on", "at", "in"]}, 
@@ -41,7 +41,7 @@ cards = [
   "radios": ["on", "at", "in"],
   "arg1": ["the garden", "the house"]
  },
- {"question":"The statue of Petr the Great located ... %arg1",
+ {"question":"The statue of Petr the Great is located ... %arg1",
   "answer": "in",
   "radios": ["on", "at", "in"],
   "arg1": ["Moscow", "Saint-Petersburg", "Nizhnii Novgorod"]
@@ -51,20 +51,15 @@ cards = [
   "radios": ["on", "at", "in"],
   "arg1": ["France", "Tunisia", "Mali"]
  },
- {"question":"The is something for ... %arg1",
+ {"question":"There is something ... %arg1",
   "answer": "in",
   "radios": ["on", "at", "in"],
-  "arg1": ["a box", "my pocket"]
+  "arg1": ["my pocket"]
  },
  {"question":"The money was ... %arg1",
   "answer": "in",
   "radios": ["on", "at", "in"],
   "arg1": ["my wallet", "my pocket"]
- },
- {"question":"I lost my keys ... %arg1",
-  "answer": "in",
-  "radios": ["on", "at", "in"],
-  "arg1": ["a building", "my car"]
  },
  {"question":"I lost my keys ... %arg1",
   "answer": "in",
@@ -89,7 +84,7 @@ cards = [
  {"question":"He is ... %arg1",
   "answer": "at",
   "radios": ["on", "at", "in"],
-  "arg1": ["the top", "the bottom", "reception"]
+  "arg1": ["the top", "the bottom", "the reception"]
  },
  {"question":"We both were ... %arg1 this day",
   "answer": "in",
@@ -111,7 +106,7 @@ cards = [
   "radios": ["on", "at", "in"],
   "arg1": ["the newspaper"]
  },
- {"question":"They had killed a few people ... %arg1",
+ {"question":"They killed a few people ... %arg1",
   "answer": "in",
   "radios": ["on", "at", "in"],
   "arg1": ["a row"]
@@ -122,12 +117,12 @@ cards = [
   "arg1": ["Oxford Street"]
  },
  {"question":"We came here ... %arg1",
-  "answer": "on",
+  "answer": "by",
   "radios": ["on", "at", "in"],
   "arg1": ["a bus", "a train", "a plane", "a ship"]
  },
  {"question":"This time I came ... %arg1",
-  "answer": "on",
+  "answer": "by",
   "radios": ["on", "at", "in"],
   "arg1": ["an elephant", "a motorcycle", "a bike", "a horse"]
  },

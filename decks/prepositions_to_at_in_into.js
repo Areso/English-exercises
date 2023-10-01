@@ -12,7 +12,7 @@ grammar+= "Go into, get into = 'enter'<br>"
 grammar+= "Acceptable: Come in(to) house<br>"
 grammar+= "Enter doesnt req prep! eg Enter a house<br>";
 grammar+= "The opp: ouf of smth<br>";
-grammar+= "Get on/off a bus/train/plane<br>";
+grammar+= "Get on/off a bus/train/plane<br>";//посадка в авто или бас - into, потому что это направление движения
 
 cards = [
  {"question":"I want to go ... %arg1",
@@ -75,7 +75,7 @@ cards = [
   "radios": ["to", "at", "in", "into", "no preposition"],
   "arg1": []
  },
- {"question":"How did arrive ... %arg1?",
+ {"question":"How did you arrive ... %arg1?",
   "answer": "at",
   "radios": ["to", "at", "in", "into"],
   "arg1": ["the hotel", "the party", "work"]
@@ -86,7 +86,7 @@ cards = [
   "arg1": ["Be", "Stay", "Just do something"]
  },
  {"question":"He got ... the car and drove away",
-  "answer": ["into", "in"],
+  "answer": "into",
   "radios": ["to", "at", "in", "into"],
   "arg1": []
  },
@@ -101,7 +101,7 @@ cards = [
   "arg1": ["car", "taxi"]
  },
  {"question":"He got ... the bus and the bus carried him away",
-  "answer": "on",
+  "answer": "into",
   "radios": ["to", "at", "in", "into", "on"],
   "arg1": []
  },

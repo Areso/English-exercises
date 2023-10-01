@@ -25,7 +25,7 @@ cards = [
   "comment": "don't forget 'the' article",
   "minor": "yes"
  },
- {"question":"Did you see ...  (small) car ever?",
+ {"question":"This is ...  (small) I have ever seen",
   "answer": ["the smallest", "smallest"],
   "comment": "don't forget 'the' article",
   "minor": "yes"
@@ -35,11 +35,6 @@ cards = [
  },
  {"question":"He is ... (gentle) than most",
   "answer": ["more gentle","gentler"]
- },
- {"question":"It was ... (bad) day ever!",
-  "answer": ["the worst","worst"],
-  "comment": "don't forget 'the' article",
-  "minor": "yes"
  },
  {"question":"It was ... (bad) day ever!",
   "answer": ["the worst","worst"],

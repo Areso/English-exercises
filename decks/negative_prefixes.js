@@ -20,12 +20,12 @@ cards = [
   "answer": "irresposible"
  },
  {"question":"It was totally ... (not believable)",
-  "answer": "unbeliavable"
+  "answer": "unbelievable"
  },
  {"question":"It is ... (not immigrant) visa. You can't apply for the resident card",
   "answer": "nonimmigrant"
  },
- {"question":"We need to ... (undo hydrate) it before it starts rotten",
+ {"question":"We need to ... (undo hydrate) it before starts rottening",
   "answer": "dehydrate"
  },
  {"question":"... (stop regulating) it and you will see this sector blooming",
@@ -37,11 +37,11 @@ cards = [
  {"question":"You need to ... (revert assemble) it first",
   "answer": "disassemble"
  },
- {"question":"This is 100% is ... (not normal)",
+ {"question":"This is 100% ... (not normal)",
   "answer": "abnormal"
  },
  {"question":"This ... (working against graviation) engine still works fine. But you need to tune it",
-  "answer": ["antigraviation","antrigrav","antigraviate"]
+  "answer": ["antigraviation","antrigrav"]
  },
  {"question":"Why you rebooted the server? I was ... (have wrong guide) about the plan",
   "answer": "misguided"
@@ -52,11 +52,8 @@ cards = [
  {"question":"You need to ... (undo activating) the countdown timer now!",
   "answer": "deactivate"
  },
- {"question":"You need to ... (code) the message before read",
+ {"question":"You need to ... (code) the message before reading",
   "answer": "decode"
- },
- {"question":"You need to ... (undo composing) the task to smaller tasks",
-  "answer": "decompose"
  },
  {"question":"You need to ... (undo composing) the task to smaller tasks",
   "answer": "decompose"
@@ -70,7 +67,7 @@ cards = [
  {"question":"You need to ... (undo inflate) this balloon",
   "answer": "deflate"
  },
- {"question":"You need to ... (v. flect) all this attacks",
+ {"question":"You need to ... (v. flect) all these attacks",
   "answer": "deflect"
  },
  {"question":"You need to ... (undo form) this ugly mask",
@@ -80,10 +77,10 @@ cards = [
   "answer": "demythologize"
  },
  {"question":"This train ... (rails off) yesterday",
-  "answer": ["derail","derailed"]
+  "answer": "derailed"
  },
  {"question":"She ... (v. track) from her achievement",
-  "answer": "detract"
+  "answer": ["detracts","detrackted"]
  },
  {"question":"She ... (not agrees) on that with him",
   "answer": "disagrees"
@@ -91,10 +88,7 @@ cards = [
  {"question":"We agree to ... (not agree) on that",
   "answer": "disagree"
  },
- {"question":"Military plot of ...(affected) group with the current government",
-  "answer": "disaffected"
- },
- {"question":"Military plot of ...(affected) group with the current government",
+ {"question":"Military plot ...(affected) group with the current government",
   "answer": "disaffected"
  },
  {"question":"... (void of belief) will collapse this society one day",
@@ -103,13 +97,13 @@ cards = [
  {"question":"... (void of honor) you braught shall be paid off with your blood!",
   "answer": "dishonor"
  },
- {"question":"... (v infect) your wound ASAP",
+ {"question":"... (negative verb of infect) your wound ASAP",
   "answer": "disinfect"
  },
  {"question":"... (non infection) is in order!",
   "answer": "disinfection"
  },
- {"question":"You should to ... (v inherit) your son because of his dishonor",
+ {"question":"You should ... (verb of inherit) your son because of his dishonor",
   "answer": "disinherit"
  },
  {"question":"... (non loyalty) to your liege is punished by death",
@@ -118,10 +112,7 @@ cards = [
  {"question":"Being ... (non loyal) to your superior is somewhat common nowadays",
   "answer": "disloyal"
  },
- {"question":"Being ... (non loyal) to your superior is somewhat common nowadays",
-  "answer": "disloyal"
- },
- {"question":"... (non please) hime once and he will hate you forever",
+ {"question":"... (non please) him once and he will hate you forever",
   "answer": "displease"
  },
  {"question":"... (non trust) is very common nowadays",

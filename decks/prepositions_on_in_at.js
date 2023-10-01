@@ -1,6 +1,6 @@
-topic = "On/it/at (other uses).";
+topic = "On/in/at (other uses).";
 grammar = "We say 'be/go on holiday/business/a trip/a tour/a cruise'<br>";
-grammar+= "Also could say 'for a holiday/ for my holiday'<br>";
+grammar+= "Also can say 'for a holiday/ for my holiday'<br>";
 grammar+= "On TV, and on the radio<br>";
 grammar+= "On the phone/telephone<br>";
 grammar+= "be/go on strike/a diet<br>";
@@ -46,7 +46,7 @@ cards = [
  {"question":"%arg1 is ... fire!",
   "answer": "on",
   "radios": ["on", "in", "at", "for"],
-  "arg1": ["Police car", "The train", "The bus"],
+  "arg1": ["The police car", "The train", "The bus"],
  },
  {"question":"... the whole I %arg1 %arg2",
   "answer": "on",
@@ -59,12 +59,12 @@ cards = [
   "radios": ["on", "in", "at", "with", "by"],
   "arg1": [],
  },
- {"question":"We walk ... the %arg1",
+ {"question":"We often walk ... the %arg1",
   "answer": "in",
   "radios": ["on", "in", "at", "with"],
   "arg1": ["rain", "sun", "shade", "dark"],
  },
- {"question":"We walk ... bad weather",
+ {"question":"We often walk ... bad weather",
   "answer": "in",
   "radios": ["on", "in", "at", "with"],
  },
@@ -99,7 +99,14 @@ cards = [
   "arg2": [17, 22, "the age of 17", "the age of 21"],
   "tied": "yes",
  },
- {"question":"I graduated from %arg1 ... %arg2",
+ {"question":"I graduated %arg1 ... %arg2",
+  "answer": "in",
+  "radios": ["in", "by", "with", "at"],
+  "arg1": ["school","university"],
+  "arg2": [2008, 2013],
+  "tied": "yes",
+ },
+ {"question":"I graduated from MIT %arg1 ... %arg2",
   "answer": "in",
   "radios": ["in", "by", "with", "at"],
   "arg1": ["school","university"],

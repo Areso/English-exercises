@@ -1,8 +1,9 @@
 topic = "Usage of 'by' preposition.";
-grammar = "We 'by' to answer 'how' it happened<br>";
+grammar = "We use 'by' to answer 'how' it happened<br>";
 grammar+= "With a few exceptions: 'pay in cash',<br>";
 grammar+= "'done on purpose', 'on foot'.<br>"
 grammar+= "By a margin, i.e. 'by 100 meters', 'by $100 increase'.<br>"
+grammar+= "Means of transportation (e.g. I came by taxi)"
 cards = [
  {"question":"I sent %arg2 mail ... %arg1",
   "answer": "by",
@@ -42,7 +43,8 @@ cards = [
  {"question":"I came here ... %arg1",
   "answer": "by",
   "radios": ["by", "on", "in", "with"],
-  "arg1": ["car", "train", "plane", "boat", "ship", "bus", "bicycle", "road", "rail", "air", "sea", "underground"],
+  "arg1": ["car", "train", "plane", "boat", "ship", "ferrow",
+  "bus", "bicycle", "road", "rail", "air", "sea", "underground"],
  },
  {"question":"I came here ... %arg1",
   "answer": "in",
@@ -80,10 +82,6 @@ cards = [
   "radios": ["by", "of", "from"],
  },
  {"question":"Your place is ... my side",
-  "answer": "by",
-  "radios": ["by", "at"],
- },
- {"question":"The light switch is ... the fridge",
   "answer": "by",
   "radios": ["by", "at"],
  },

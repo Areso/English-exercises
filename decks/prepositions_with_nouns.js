@@ -1,9 +1,16 @@
 topic = "Prepositions with nouns.";
 grammar = "Cheque, demand, need, reason FOR<br>";
 grammar+= "[Dis]advantage of, cause of, photo/map/picture of<br>";
-
+//this thing with a check needs a second opinion
 cards = [
- {"question":"I got a cheque ... %arg1 %arg2",
+ {"question":"I got a %arg1 cheque ... %arg2",
+  "answer": "for",
+  "radios": ["for", "with", "by", "on"],
+  "arg1": ["$750"],
+  "arg2": ["for my game"],
+  "tied": "yes",
+ },
+ {"question":"I got a cheque for %arg1 ... %arg2",
   "answer": "for",
   "radios": ["for", "with", "by", "on"],
   "arg1": ["$750"],
@@ -18,7 +25,11 @@ cards = [
   "answer": "for",
   "radios": ["for", "of", "by", "on"],
  },
- {"question":"I don't have reason ... it",
+ {"question":"I don't have a reason ... it",
+  "answer": "for",
+  "radios": ["for", "of", "by", "on"],
+ },
+ {"question":"I don't have any reason ... it",
   "answer": "for",
   "radios": ["for", "of", "by", "on"],
  },
@@ -38,7 +49,7 @@ cards = [
   "answer": "of",
   "radios": ["of", "in", "to", "by"],
  },
- {"question":"A map ... the castle was made in XIX century",
+ {"question":"A map ... the castle was made in the XIX century",
   "answer": "of",
   "radios": ["of", "in", "to", "by"],
  },
@@ -71,7 +82,7 @@ cards = [
   "answer": "to",
   "radios": ["of", "to", "for"],
  },
- {"question":"A reaction ... a light was checked",
+ {"question":"The reaction ... a light was checked",
   "answer": "to",
   "radios": ["of", "to", "for"],
  },
@@ -84,7 +95,7 @@ cards = [
   "radios": ["with", "to", "for"],
   "arg1": ["relationship","contact","connection"],
  },
- {"question":"There are no difference ... Evil and Good",
+ {"question":"There is no difference ... Evil and Good",
   "answer": "between",
   "radios": ["with", "to", "for", "between"],
   "arg1": ["relationship","contact","connection"],
