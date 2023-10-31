@@ -169,7 +169,7 @@ cards = [
   "radios": [],
   "arg1": []},
  {"question":"lie (to person)",
-  "answer": "",
+  "answer": "lied lied",
   "radios": [],
   "arg1": []},
  {"question":"lose",
