@@ -51,6 +51,13 @@ jobs:
           ref: gh-pages
           path: ./.github/gh-pages
 
+      - name: Debug1
+        working-directory: ./English-exercises-AQA
+        run:
+          ls -lah
+          ls -lah ../
+          ls -lah ../.github/
+
       - name: Copy history from gh-pages to allure-results
         working-directory: ./English-exercises-AQA
         if: always()
