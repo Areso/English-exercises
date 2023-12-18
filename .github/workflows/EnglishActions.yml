@@ -34,7 +34,7 @@ jobs:
           pytest -s -vv --alluredir=allure-results
 
       - name: Add allure information
-        working-directory: allure-results
+        working-directory: ./English-exercises-AQA/allure-results
         if: always()
         run: |
           echo GIT_BRANCH=${{ github.head_ref || github.ref_name }}  >> environment.properties
@@ -44,8 +44,6 @@ jobs:
           echo GIT_COMMIT_TIME=$(git show -s --format=%ci HEAD) >> environment.properties
           echo CHROME_VERSION=$(google-chrome --product-version) >> environment.properties
 
-
-
       - name: Checkout (copy) gh-pages repository to GitHub runner
         uses: actions/checkout@v2
         if: always()
@@ -53,22 +51,21 @@ jobs:
           ref: gh-pages
           path: ./.github/gh-pages
 
-
-
-
-
       - name: Copy history from gh-pages to allure-results
+        working-directory: ./English-exercises-AQA
         if: always()
         run: |
           sudo mkdir -p allure-results/history
-          sudo cp -R ./.github/gh-pages/history/* allure-results/history/
+          sudo cp -R ../.github/gh-pages/history/* allure-results/history/
 
       - name: Generate Allure report
+        working-directory: ./English-exercises-AQA
         if: always()
         run: |
           sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
 
       - name: Update Allure history
+        working-directory: ./English-exercises-AQA
         if: always()
         run: |
           sudo cp -R allure-report/history/* ./.github/gh-pages/history/
