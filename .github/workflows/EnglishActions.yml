@@ -53,10 +53,15 @@ jobs:
 
       - name: Debug1
         working-directory: ./English-exercises-AQA
-        run: |
-          ls -lah
-          ls -lah ../
-          ls -lah ../.github/
+        run: ls -lah
+
+      - name: Debug2
+        working-directory: ./English-exercises-AQA
+        run: ls -lah ../
+
+      - name: Debug3
+        working-directory: ./English-exercises-AQA
+        run: ls -lah ../.github
 
       - name: Copy history from gh-pages to allure-results
         working-directory: ./English-exercises-AQA
