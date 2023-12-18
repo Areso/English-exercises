@@ -53,7 +53,7 @@ jobs:
 
       - name: Debug1
         working-directory: ./English-exercises-AQA
-        run:
+        run: |
           ls -lah
           ls -lah ../
           ls -lah ../.github/
