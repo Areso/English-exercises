@@ -63,6 +63,10 @@ jobs:
         working-directory: ./English-exercises-AQA
         run: ls -lah ../.github
 
+      - name: Debug4
+        working-directory: ./English-exercises-AQA
+        run: ls -lah ../.github/gh-pages
+
       - name: Copy history from gh-pages to allure-results
         working-directory: ./English-exercises-AQA
         if: always()
