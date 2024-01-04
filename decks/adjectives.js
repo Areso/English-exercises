@@ -47,8 +47,9 @@ cards = [
   "minor": "yes"
  },
  {"question":"He is ... (good), whe he works alone",
-  "answer": ["best"],
-  "comment": "you don't need the article because you comparing the same thing"
+  "answer": ["best", "the best"],
+  "comment": "you don't need the article because you comparing the same thing in different circumstances",
+  "showcomment": "yes",
  },
 ]
 
