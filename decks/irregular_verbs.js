@@ -75,7 +75,7 @@ cards = [
   "radios": [],
   "arg1": []},
   {"question":"choose",
-  "answer": "chose choosen",
+  "answer": "chose chosen",
   "radios": [],
   "arg1": []},
  {"question":"come",
