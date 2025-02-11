@@ -1,16 +1,14 @@
-/* Переменные для палитры, шрифтов и отступов (mobile-first) */
+/* variables for palette shitts and margins (mobile-first) */
 :root {
-  /* Цвета */
-  --color-background: #f4f4f4;    /* Фоновый цвет страницы */
-  --color-body-bg: #ffffff;       /* Цвет фона карточек и футера */
-  --color-text: #333333;          /* Основной цвет текста */
-  --color-primary: #2c3e50;       /* Цвет заголовков и акцентов */
-  --color-secondary: #2980b9;     /* Цвет для интерактивных элементов и ссылок */
-  --color-border: #dddddd;        /* Цвет границ */
-  --color-success: #27ae60;       /* Зеленый оттенок для корректных ответов */
-  --color-error: #e74c3c;         /* Красный оттенок для некорректных ответов */
+  --color-background: #f4f4f4;    /* background color */
+  --color-body-bg: #ffffff;       /* cards' color and footer's color */
+  --color-text: #333333;
+  --color-primary: #2c3e50;       /* H1 color  */
+  --color-secondary: #2980b9;     /* Links and elements color */
+  --color-border: #dddddd;
+  --color-success: #27ae60;
+  --color-error: #e74c3c;
 
-  /* Размеры */
   --font-size-base: 16px;
   --font-size-medium: 20px;
   --font-size-large: 24px;
@@ -20,7 +18,7 @@
   --max-width-lesson: 500px;
 }
 
-/* Сброс отступов и базовые стили */
+/* margins reset and basic style */
 * {
   margin: 0;
   padding: 0;
@@ -35,14 +33,14 @@ body {
   line-height: 1.6;
 }
 
-/* Центрированный контейнер */
+/* center box */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--padding-base);
 }
 
-/* Стили для логотипа и карточек глав (используются на главной странице) */
+/* Logo' style and chapters' style */
 .logo {
   text-align: center;
   margin: var(--margin-base) 0;
@@ -133,7 +131,7 @@ body {
   background-color: var(--color-body-bg);
 }
 
-/* Стили для интерактивной страницы (игры) */
+/* Lessons' styles */
 .interactive-page .container {
   max-width: var(--max-width-lesson);
  }
@@ -154,7 +152,7 @@ body {
   color: var(--color-secondary);
 }
 
-/* Область для вопроса — сделана больше */
+/* Question area */
 .question-card {
   background-color: var(--color-body-bg);
   border: 1px solid var(--color-border);
@@ -164,7 +162,6 @@ body {
   min-height: 200px;
 }
 
-/* Текстовое поле для ответа */
 #answer_text_field {
   width: 100%;
   padding: 8px;
@@ -174,14 +171,12 @@ body {
   margin-bottom: var(--margin-base);
 }
 
-/* Секция для отображения результата */
 .result-section {
   text-align: center;
   margin-bottom: var(--margin-base);
   font-size: var(--font-size-base);
 }
 
-/* Группа кнопок управления */
 .button-group {
   display: flex;
   flex-wrap: wrap;
@@ -205,7 +200,6 @@ body {
   background-color: var(--color-primary);
 }
 
-/* Ссылка для возврата */
 .back-link {
   text-align: center;
   margin-top: var(--margin-base);
@@ -217,7 +211,6 @@ body {
   font-weight: bold;
 }
 
-/* Стили для корректных и некорректных ответов */
 .correct {
   color: var(--color-success);
 }
@@ -226,7 +219,7 @@ body {
   color: var(--color-error);
 }
 
-/* Грид для вариантов ответа (ячейки без margin) */
+/* Grid , cells no margin */
 .answer-options {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -234,23 +227,19 @@ body {
   margin-bottom: var(--margin-base);
 }
 
-
-/* Стили для ячеек вариантов (любые элементы внутри .answer-options) */
-
-
 .answer-options > *:hover {
   background-color: var(--color-background);
 }
 
 
-/* Скрываем стандартный радио-инпут */
+/* hiding radio-input */
 #answer_radiobutton_div input[type="radio"] {
   opacity: 0;
   position: absolute;
   pointer-events: none;
 }
 
-/* Оформление label, связанного с радио кнопками */
+/* radio-input-like label */
 #answer_radiobutton_div label {
   flex-grow: 1;
   flex-shrink: 0;
@@ -270,13 +259,12 @@ body {
 }
 
 
-/* Эффект выбранного состояния: когда input отмечен, его соседний label получает заливку */
+/* when input is checked label is colored */
 #answer_radiobutton_div input[type="radio"]:checked + label {
   background-color: var(--color-secondary);
   color: var(--color-body-bg);
 }
 
-/* Эффект наведения для label */
 #answer_radiobutton_div label:hover {
   border-color: var(--color-secondary);
 }
@@ -286,7 +274,7 @@ body {
 }
 
 
-/* Медиа-запрос для экранов от 768px (десктоп) */
+/* desktop handling */
 @media (min-width: 768px) {
   .container {
     padding: calc(var(--padding-base) * 1.5);
