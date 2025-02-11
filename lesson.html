@@ -1,22 +1,9 @@
 <!DOCTYPE html>
 <head>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<title>
-English exercises
-</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-img {
-    max-width: 100%;
-    height: auto;
-}
-.correct {
-    color: green;
-}
-.wrong {
-    color: red;
-}
-</style>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>English exercises</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -35,42 +22,64 @@ img {
 <!-- /Yandex.Metrika counter -->
 <script src="js/eventer.js" ></script>
 </head>
-<body>
-<noscript><div><img src="https://mc.yandex.ru/watch/91922670" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<span id="spnTopic">Put the correct preposition!</span>
-<span id="spnCurPos">1</span>/<span id="spnTotal">N</span><br><br>
-<div id="question"></div><br>
-<div id="answer_radiobutton_div">
+<body class="interactive-page">
+    <noscript>
+      <div>
+        <img src="https://mc.yandex.ru/watch/91922670" style="position:absolute; left:-9999px;" alt=""/>
+      </div>
+    </noscript>
 
-</div><br>
-<div id="answer_text_div">
-    <input type="text" id="answer_text_field">
-</div><br>
-<div id="resultDiv">
-    <lbl id="lblAction">CHECK: </lbl><lbl id="resultLbl"></lbl>
-</div><br>
-<br>
-<button id="checkBtn"       onclick="getAnswer()"  >check answer</button>
-<button id="nextBtn"        onclick="nextCard()"   style="margin-left:20px">next card</button>
-<button id="showAnswerBtn"  onclick="showAnswer()" style="margin-left:20px">show answer</button>
+    <div class="container">
+      <div class="exercise-header">
+        <h2 id="spnTopic">Put the correct preposition!</h2>
+        <div class="progress">
+          <span id="spnCurPos">1</span>/<span id="spnTotal">N</span>
+        </div>
+      </div>
+      <div class="question-card" id="question">
+        <!-- Question would be put here -->
+      </div>
 
-<br><br>
-<a href="index.html">Back to the table of content</a>
-</body>
-<script>
-include = function (url, fn) {
-  var e = document.createElement("script");
-  e.onload = fn;
-  e.src = url;
-  e.async=true;
-  document.getElementsByTagName("head")[0].appendChild(e);
-};
-</script>
-<script id="lessonDeckScript"></script>
-<script>
-const urlParams = new URLSearchParams(window.location.search);
-const lesson_name = urlParams.get('lesson');
-const lesson_src = "decks/"+lesson_name+".js";
-document.getElementById("lessonDeckScript").src = lesson_src;
-</script>
+      <!-- Grid with the options -->
+      <div class="answer-options" id="answer_radiobutton_div">
+        <!-- Dynamically filled -->
+      </div>
+
+      <div id="answer_text_div">
+        <input type="text" id="answer_text_field" placeholder="Type your answer here">
+      </div>
+
+      <div class="result-section" id="resultDiv">
+        <span id="lblAction">CHECK:</span>
+        <span id="resultLbl"></span>
+      </div>
+
+      <div class="button-group">
+        <button id="checkBtn" onclick="getAnswer()">Check Answer</button>
+        <button id="nextBtn" onclick="nextCard()">Next Card</button>
+        <button id="showAnswerBtn" onclick="showAnswer()">Show Answer</button>
+      </div>
+
+      <div class="back-link">
+        <a href="index.html">Back to the table of content</a>
+      </div>
+    </div>
+
+    <script>
+      include = function (url, fn) {
+        var e = document.createElement("script");
+        e.onload = fn;
+        e.src = url;
+        e.async = true;
+        document.getElementsByTagName("head")[0].appendChild(e);
+      };
+    </script>
+    <script id="lessonDeckScript"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const lesson_name = urlParams.get('lesson');
+      const lesson_src = "decks/" + lesson_name + ".js";
+      document.getElementById("lessonDeckScript").src = lesson_src;
+    </script>
+  </body>
 </html>

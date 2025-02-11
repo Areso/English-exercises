@@ -68,6 +68,7 @@ function loadCard() {
       dom_radio.id    = "radio"+cards[card_id].radios[i];
       answers.appendChild(dom_radio);
       dom_radio_lbl = document.createElement('label');
+      dom_radio_lbl.htmlFor   = "radio"+cards[card_id].radios[i];
       dom_radio_lbl.innerHTML = cards[card_id].radios[i]+"<br>";
       answers.appendChild(dom_radio_lbl);
     }
