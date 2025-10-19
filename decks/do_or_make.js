@@ -92,7 +92,7 @@ cards = [
   "answer": "make",
   "radios": ["do", "make"],
  },
- {"question":"It’s not his fault. I ... him do it!",
+ {"question":"It's not his fault. I ... him do it!",
   "answer": "made",
   "radios": ["made", "did"],
  },
