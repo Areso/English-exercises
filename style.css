@@ -100,12 +100,17 @@ body {
   color: var(--color-primary);
 }
 
-.chapter-lessons {
+.chapter-lessons-preps {
   display: none;
   border-top: 1px solid var(--color-border);
 }
 
-.chapter-lessons a {
+.chapter-lessons-articles {
+  display: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.chapter-lessons-preps a {
   display: block;
   padding: var(--padding-base);
   text-decoration: none;
@@ -114,11 +119,29 @@ body {
   transition: background-color 0.3s;
 }
 
-.chapter-lessons a:last-child {
+.chapter-lessons-articles a {
+  display: block;
+  padding: var(--padding-base);
+  text-decoration: none;
+  color: var(--color-secondary);
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.3s;
+}
+
+.chapter-lessons-preps a:last-child {
   border-bottom: none;
 }
 
-.chapter-lessons a:hover {
+.chapter-lessons-articles a:last-child {
+  border-bottom: none;
+}
+
+.chapter-lessons-preps a:hover {
+  background-color: var(--color-background);
+}
+
+
+.chapter-lessons-articles a:hover {
   background-color: var(--color-background);
 }
 
@@ -282,7 +305,8 @@ body {
   .chapter-header {
     padding: calc(var(--padding-base) * 1.5);
   }
-  .chapter-lessons a {
+
+  [class^="chapter-lessons"] a {
     padding: calc(var(--padding-base) * 1.25);
   }
   .exercise-header h2 {
