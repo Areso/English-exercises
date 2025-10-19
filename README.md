@@ -19,3 +19,10 @@ Negative prefixes
 
 ## ToDo  
 Fix synonyms  
+
+
+## How to contribute
+For existing exercises open /decks/ folder and contribute to the lesson  
+  
+For new exercsises create a template according to existing ones, and I will adjust the menu and stuff  
+  
