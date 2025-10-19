@@ -105,7 +105,7 @@ cards = [
   "radios": ["do", "make"],
   "arg1": ["won't", "wouldn't like to"],
  },
- {"question":"Don't just stare – ... something!",
+ {"question":"Don't just stare -- ... something!",
   "answer": "do",
   "radios": ["do", "make"],
  },
