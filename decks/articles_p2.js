@@ -1,7 +1,7 @@
 topic = "Basic usage of articles.";
 grammar = "We don't use articles with (move to, or be at) bed, work, home<br>";
-grammar = "We usually don't the ariticles with school, university, prison and hospital.<br>";
-grammar = "However, with visiting not as a student/prisoner/patiner - the article is needed.<br>";
+grammar += "We usually don't the ariticles with school, university, prison and hospital.<br>";
+grammar += "However, with visiting not as a student/prisoner/patient - the article is needed.<br>";
 cards = [
  {"question":"I am going to ... bed",
  "answer": ["", "no article","-"],

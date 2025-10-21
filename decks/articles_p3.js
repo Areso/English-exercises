@@ -1,4 +1,4 @@
-topic = "Articles and countries.";
+topic = "Articles and countries";
 grammar = "Usually we don't need articles with countries<br>";
 grammar+= "However, some countries require def. article: the USA(US), the UK, etc<br>";
 grammar+= "Be careful, though: I live in Great Britain<br>";
