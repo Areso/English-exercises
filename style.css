@@ -313,3 +313,67 @@ body {
     font-size: calc(var(--font-size-large) * 1.1);
   }
 }
+
+
+
+.info-page .container {
+  max-width: var(--max-width-lesson);
+}
+
+/* Topic title — same visual hierarchy as .exercise-header h2 */
+#spnTopic {
+  display: block;
+  text-align: center;
+  font-size: var(--font-size-large);
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Grammar text — readable block under topic */
+#spnGrammar {
+  display: block;
+  text-align: left;
+  color: var(--color-text);
+  margin-bottom: var(--margin-base);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+#spnGrammar br {
+  display: block;
+  margin-bottom: 0.6em;  /* ← adjust spacing here (0.5–1em usually works well) */
+  content: "";
+}
+
+/* Optional: wrap grammar in a card-like container */
+.grammar-card {
+  background-color: var(--color-body-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--padding-base);
+  margin-bottom: var(--margin-base);
+}
+
+/* Back link styling (reuse from lesson page) */
+.info-page .back-link {
+  text-align: center;
+  margin-top: var(--margin-base);
+}
+
+.info-page .back-link a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+.info-page .back-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive improvement — same scaling as lessons */
+@media (min-width: 768px) {
+  #spnTopic {
+    font-size: calc(var(--font-size-large) * 1.1);
+  }
+}

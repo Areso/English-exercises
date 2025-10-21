@@ -1,4 +1,4 @@
-topic = "Basic usage of articles.";
+topic = "Basic usage of articles";
 grammar = "a/an use with a jobs, e.g. he is a doctor, an ambulance driver<br>";
 grammar+= "a/an used with singular, countable nouns. e.g. a potato, an umbrella<br>";
 grammar+= "be careful with _an hour_, _an university_, an user and so on<br>"
