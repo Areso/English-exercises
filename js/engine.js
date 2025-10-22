@@ -100,6 +100,7 @@ function showAnswer() {
       action_dom.innerHTML = "ANSWER: "
   }
   resultLbl.innerHTML = cards[card_id].answer;
+  setPreferredButton("nextBtn");
 }
 function isAcceptable(providedAnswer) {
   //typeof from an array returns object!
@@ -155,12 +156,22 @@ function getFreq(word_to_check){
   xhttp.open("GET", endpoint, true);
   xhttp.send();
 }
+function setPreferredButton(targetId) {
+  const buttons = document.querySelectorAll('.button-group button');
+  buttons.forEach(btn => btn.classList.remove('preferred'));
+  const targetBtn = document.getElementById(targetId);
+  if (targetBtn) {
+    targetBtn.classList.add('preferred');
+  }
+}
 function checkAnswer() {
+  document.getElementById("nextBtn").innerText = "Next Card";
   if (isAcceptable(user_answer)){
 	//CORRECT OR ACCEPTABLE ANSWER
     if (action_dom.innerHTML !== "CHECK: "){
       action_dom.innerHTML = "CHECK: "
     }
+    setPreferredButton("nextBtn");
     console.log("CORRECT");
     thefreq = -1;
     if (lesson_name==="synonyms") {
@@ -177,6 +188,7 @@ function checkAnswer() {
     }
   } else {
 	//INCORRECT ANSWER
+    setPreferredButton("showAnswerBtn");
     if (action_dom.innerHTML !== "CHECK: "){
       action_dom.innerHTML = "CHECK: "
     }
@@ -186,6 +198,8 @@ function checkAnswer() {
 }
 function nextCard() {
   if (cards_deck_learn.length > 1){
+    document.getElementById("nextBtn").innerText = "Skip Card";
+    setPreferredButton("checkBtn");
     answer_field.value = "";
     answers.innerHTML  = "";
     check_result.innerHTML = "";

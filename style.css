@@ -5,6 +5,7 @@
   --color-text: #333333;
   --color-primary: #2c3e50;       /* H1 color  */
   --color-secondary: #2980b9;     /* Links and elements color */
+  --color-preferred: #4b5ae6;     /* Links and elements color */
   --color-border: #dddddd;
   --color-success: #27ae60;
   --color-error: #e74c3c;
@@ -219,6 +220,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
+
 .button-group button:hover {
   background-color: var(--color-primary);
 }
@@ -376,4 +378,13 @@ body {
   #spnTopic {
     font-size: calc(var(--font-size-large) * 1.1);
   }
+}
+
+/* Preferred button variant */
+.button-group button.preferred {
+  background-color: var(--color-preferred);
+}
+
+.button-group button.preferred:hover {
+  background-color: var(--color-primary);
 }
