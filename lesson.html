@@ -55,11 +55,22 @@
       </div>
 
       <div class="button-group">
-        <button id="checkBtn" class="preferred" onclick="getAnswer()">Check Answer</button>
-        <button id="nextBtn" onclick="nextCard()">Skip Card</button>
-        <button id="showAnswerBtn" onclick="showAnswer()">Show Answer</button>
+        <button id="checkBtn" class="preferred" onclick="getAnswer()" tabindex="0">Check Answer</button>
+        <button id="nextBtn" onclick="nextCard()" tabindex="0">Skip Card</button>
+        <button id="showAnswerBtn" onclick="showAnswer()" tabindex="0">Show Answer</button>
       </div>
 
+      <dialog id="kbdTipDialog" aria-labelledby="kbdTipTitle" aria-describedby="kbdTipDesc">
+        <h3 id="kbdTipTitle">Keyboard navigation</h3>
+        <p id="kbdTipDesc">
+          Use <b>Left/Right</b> arrows to switch answers.<br>
+          Backspace to press the button.<br>
+        </p>
+        <!-- method="dialog" makes the button close the dialog automatically -->
+        <form method="dialog">
+          <button id="kbdTipClose" type="submit">Got it</button>
+        </form>
+      </dialog>
       <div class="back-link">
         <a href="index.html">Back to the table of content</a>
       </div>
@@ -81,5 +92,40 @@
       const lesson_src = "decks/" + lesson_name + ".js";
       document.getElementById("lessonDeckScript").src = lesson_src;
     </script>
-  </body>
+
+    <script>
+      // for debug: localStorage.removeItem("seen_keyboard_tip");
+      const dlg = document.getElementById("kbdTipDialog");
+      // Close dialog when clicking on the backdrop
+      dlg.addEventListener("click", (event) => {
+        // The dialog box itself is the target. 
+        // If we click inside the 'rect' of the dialog, we do nothing.
+        // If we click outside (on the ::backdrop), we close it.
+        const rect = dlg.getBoundingClientRect();
+        const isInDialog = (rect.top <= event.clientY && event.clientY <= rect.top + rect.height &&
+          rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
+
+        if (!isInDialog) {
+          dlg.close();
+        }
+      });
+
+      if (!localStorage.getItem("seen_keyboard_tip")) {
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Tab") {
+            localStorage.setItem("seen_keyboard_tip", "1");
+            showTipOnce();
+          }
+        }, 
+        { capture: true, once: true });
+      } else {
+        console.log("the tip was shown already");
+      }
+      function showTipOnce() {
+        // showModal gives you a real modal (focus trap + backdrop)
+        if (typeof dlg.showModal === "function") dlg.showModal();
+        else dlg.setAttribute("open", ""); // fallback
+      }
+    </script>
+</body>
 </html>

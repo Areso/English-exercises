@@ -259,9 +259,21 @@ body {
 
 /* hiding radio-input */
 #answer_radiobutton_div input[type="radio"] {
-  opacity: 0;
   position: absolute;
-  pointer-events: none;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+#answer_radiobutton_div input[type="radio"]:focus-visible + label {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 3px;
 }
 
 /* radio-input-like label */
@@ -387,4 +399,53 @@ body {
 
 .button-group button.preferred:hover {
   background-color: var(--color-primary);
+}
+
+/* 1. Reset the default ugly borders and spacing */
+dialog#kbdTipDialog {
+  border: none;
+  border-radius: 12px; /* Soft rounded corners */
+  padding: 24px;       /* Breathing room inside */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Deep shadow for "pop" effect */
+  width: min(90%, 400px); /* Responsive width */
+  font-family: inherit;   /* Inherit your page's font */
+  text-align: center;
+  color: #333;
+}
+
+/* 2. Style the "Backdrop" (the dimmer behind the modal) */
+dialog#kbdTipDialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  backdrop-filter: blur(3px);           /* Optional: blurs the content behind */
+}
+
+/* 3. Typography Cleanup */
+dialog#kbdTipDialog h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+dialog#kbdTipDialog p {
+  margin-bottom: 24px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 4. Make the Button look actionable */
+dialog#kbdTipDialog button#kbdTipClose {
+  background-color: #2563eb; /* Use your site's primary color here */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+dialog#kbdTipDialog button#kbdTipClose:hover {
+  background-color: #1d4ed8; /* Slightly darker on hover */
 }

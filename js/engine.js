@@ -66,8 +66,11 @@ function loadCard() {
       dom_radio.name  = "possibleAnswers";
       dom_radio.value = cards[card_id].radios[i];
       dom_radio.id    = "radio"+cards[card_id].radios[i];
+      dom_radio.tabIndex = 0;
       answers.appendChild(dom_radio);
+
       dom_radio_lbl = document.createElement('label');
+      dom_radio_lbl.id        = "lbl"+cards[card_id].radios[i];
       dom_radio_lbl.htmlFor   = "radio"+cards[card_id].radios[i];
       dom_radio_lbl.innerHTML = cards[card_id].radios[i]+"<br>";
       answers.appendChild(dom_radio_lbl);
@@ -174,6 +177,7 @@ function checkAnswer() {
     setPreferredButton("nextBtn");
     console.log("CORRECT");
     thefreq = -1;
+    document.getElementById("nextBtn").focus();
     if (lesson_name==="synonyms") {
       getFreq(user_answer);
     }
